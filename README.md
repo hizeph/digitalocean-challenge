@@ -38,4 +38,4 @@ helm install kyverno kyverno/kyverno --namespace kyverno --create-namespace
 
 # Demo
 
-[Video Download](https://github.com/hizeph/digitalocean-challenge/raw/main/demo.mp4)
+[YouTube Video](https://youtu.be/UwP_NH0-B-I)
