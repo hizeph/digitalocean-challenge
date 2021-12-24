@@ -16,8 +16,10 @@ spec:
       labels:
         app: my-deploy
     spec:
+      imagePullSecrets:
+      - name: do-sfo3-k8s-1-21-5-do-cezar-bernardi
       containers:
-      - image: registry.digitalocean.com/busybox
+      - image: registry.digitalocean.com/do-sfo3-k8s-1-21-5-do-cezar-bernardi/busybox:latest
         name: busybox
         resources: {}
         command:

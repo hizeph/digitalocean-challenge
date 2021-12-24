@@ -1,5 +1,21 @@
 # Installing Kyverno
 
+## Pre Requisites
+
+- Digital Ocean Kubernetes Cluster
+- Digital Ocean Container Registry
+- [doctl](https://docs.digitalocean.com/reference/doctl/how-to/install/)
+- [Helm](https://helm.sh/docs/intro/install/)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
+- (Optional) [Kyverno CLI](https://kyverno.io/docs/kyverno-cli/)
+
+## Upload sample image to DOCR
+
+```
+docker tag e7d168d7db45 registry.digitalocean.com/do-sfo3-k8s-1-21-5-do-cezar-bernardi/busybox:latest
+docker image push registry.digitalocean.com/do-sfo3-k8s-1-21-5-do-cezar-bernardi/busybox:latest
+```
+
 ## Add Kyverno Helm Chart Repo
 
 ```
@@ -18,6 +34,8 @@ helm install kyverno kyverno/kyverno --namespace kyverno --create-namespace
 
 ### Use Kyverno CLI to test resources
 
-[Installation](https://kyverno.io/docs/kyverno-cli/#install-via-krew)
-
 `kubectl-kyverno test resources`
+
+# Demo
+
+[Video Download](https://github.com/hizeph/digitalocean-challenge/raw/main/demo.mp4)
